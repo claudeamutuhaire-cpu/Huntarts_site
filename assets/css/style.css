@@ -1,0 +1,59 @@
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  background: #25D366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s;
+}
+
+.whatsapp-float:hover { transform: scale(1.1); }
+
+.whatsapp-float img { width: 40px; height: 40px; }
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  background: var(--accent);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  z-index: 998;
+}
+
+.back-to-top.visible { opacity: 1; visibility: visible; }
+
+/* Mobile nav (simple toggle) */
+@media (max-width: 768px) {
+  nav ul { 
+    flex-direction: column; 
+    position: absolute; 
+    top: 100%; left: 0; right: 0; 
+    background: rgba(0,0,0,0.9); 
+    padding: 1rem; 
+    display: none; 
+  }
+  nav ul.active { display: flex; }
+  /* Add hamburger icon in header if needed */
+}
+
+/* Form hints */
+input:invalid:focus, textarea:invalid:focus { border-color: #ff3366; }
