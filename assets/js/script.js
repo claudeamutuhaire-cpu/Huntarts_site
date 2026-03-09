@@ -26,3 +26,13 @@ if (localStorage.getItem('theme') === 'light') {
   html.setAttribute('data-theme', 'light');
   toggle.textContent = '☀️';
       }
+// Example fetch to Firebase (needs init first)
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  // ... collect data ...
+  await fetch('https://hell-ad7ee.firebaseio.com/messages.json', {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: { 'Content-Type': 'application/json' }
+  });
+});
