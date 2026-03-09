@@ -114,3 +114,73 @@ footer { background: rgba(0,0,0,0.7); padding: 3rem 0; text-align: center; }
 }
 
 .cta h3 { color: var(--accent); }
+
+.contact-options {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  background: var(--accent);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta-btn:hover { transform: scale(1.1); background: var(--accent2); }
+
+.whatsapp-btn { background: #25D366; }
+.call-btn { background: #007bff; }
+
+.contact-form {
+  max-width: 600px;
+  margin: 4rem auto;
+  background: var(--card);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+label { display: block; margin-bottom: 0.6rem; font-weight: bold; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus { border-color: var(--accent); outline: none; }
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--accent), #ff6699);
+  color: white;
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,51,102,0.5); }
+
+.note { text-align: center; font-style: italic; margin-top: 2rem; color: #aaa; }
