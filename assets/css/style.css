@@ -184,3 +184,5 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent); outline
 .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,51,102,0.5); }
 
 .note { text-align: center; font-style: italic; margin-top: 2rem; color: #aaa; }
+
+<nav aria-label="Main navigation">
