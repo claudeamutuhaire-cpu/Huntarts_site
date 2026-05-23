@@ -434,3 +434,64 @@ footer {
 .text-center { text-align: center; }
 .mt-4 { margin-top: 4rem; }
 .mb-0 { margin-bottom: 0; }
+
+/* Hero Video */
+.hero-video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85));
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 20vh;
+}
+
+/* Video Cards */
+.video-card {
+  position: relative;
+}
+
+.showcase-video {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.showcase-video:hover {
+  filter: brightness(1.1);
+}
+
+/* Scroll Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card, .pricing-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Stagger animation */
+.gallery .card:nth-child(1) { animation-delay: 100ms; }
+.gallery .card:nth-child(2) { animation-delay: 200ms; }
+.gallery .card:nth-child(3) { animation-delay: 300ms; }
