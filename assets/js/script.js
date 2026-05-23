@@ -55,4 +55,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Autoplay videos on scroll (better performance)
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll('.showcase-video');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.play().catch(() => {});
+      } else {
+        entry.target.pause();
+      }
+    });
+  }, { threshold: 0.6 });
+
+  videos.forEach(video => observer.observe(video));
+  
+  // Intro hide after load
+  setTimeout(() => {
+    document.getElementById('intro').style.opacity = '0';
+  }, 2200);
+});
+
 // Mobile nav toggle (add hamburger in HTML if not there)
